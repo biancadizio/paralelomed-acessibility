@@ -1,0 +1,58 @@
+.header {
+    background-image: url("../../assets/imagem-header.png");
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    height: 8rem;
+}
+
+.logo {
+    height: 40px;
+}
+
+.header-center {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.accessibility-btn {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.accessibility-btn:hover {
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header-right a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+}
+
+.header-right a.active,
+.header-right a:hover {
+    background-color: #00ffca;
+    color: #003f34;
+}

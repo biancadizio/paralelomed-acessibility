@@ -1,0 +1,60 @@
+.about {
+    /* width: 100%;
+    padding: 4rem 0;
+    overflow: hidden; */
+    /* Impede quebra lateral */
+}
+
+.about .section-title {
+    background-color: #14594f;
+    /* Mesmo verde do Hero */
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto 2rem;
+    position: relative;
+    /* left: 50%;
+    transform: translateX(-50%); */
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    align-items: center;
+    max-width: 100%;
+}
+
+.about-image {
+    width: 100%;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Para telas menores */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about .section-title {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+}

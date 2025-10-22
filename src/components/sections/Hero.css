@@ -1,0 +1,31 @@
+.hero-container {
+    position: relative;
+    width: 100%;
+}
+
+.hero-card {
+    position: relative;
+    width: 100%;
+}
+
+.hero-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #004b3b;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
