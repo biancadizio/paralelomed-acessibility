@@ -17,7 +17,8 @@ export default function Header() {
                     alt="ParaleloMed"
                     className="logo"
                     style={{
-                        height: '50px',
+                        height: '100px',
+                        marginLeft: '20px',
                         transform: `scale(${fontSize / 100})`,
                         transformOrigin: 'left center'
                     }}
