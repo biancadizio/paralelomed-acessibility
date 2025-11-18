@@ -1,17 +1,26 @@
 .hero-container {
     position: relative;
     width: 100%;
+    overflow: hidden;
 }
 
 .hero-card {
     position: relative;
     width: 100%;
+    /* Altura responsiva: mínimo 300px, máximo 650px, ideal 60vh */
+    height: clamp(300px, 60vh, 650px);
+    /* Mantém proporção 16:9 em telas maiores */
+    aspect-ratio: 16 / 9;
 }
 
 .hero-card img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
+    /* Garante que a imagem cubra o container mantendo proporção */
+    object-fit: cover;
+    /* Centraliza a imagem no container */
+    object-position: center;
 }
 
 .hero-badge {
@@ -21,11 +30,38 @@
     transform: translate(-50%, -50%);
     background-color: #004b3b;
     color: white;
-    padding: 15px 30px;
+    padding: clamp(12px, 2vw, 20px) clamp(20px, 4vw, 40px);
     border-radius: 8px;
-    font-size: 1.8rem;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
     font-weight: 600;
     text-align: center;
     white-space: nowrap;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+}
+
+/* Ajustes para tablets */
+@media (max-width: 768px) {
+    .hero-card {
+        height: clamp(250px, 50vh, 500px);
+        aspect-ratio: 4 / 3;
+    }
+    
+    .hero-badge {
+        white-space: normal;
+        line-height: 1.4;
+    }
+}
+
+/* Ajustes para mobile */
+@media (max-width: 480px) {
+    .hero-card {
+        height: clamp(200px, 40vh, 400px);
+        aspect-ratio: 1 / 1;
+    }
+    
+    .hero-badge {
+        font-size: clamp(1rem, 4vw, 1.2rem);
+        padding: clamp(10px, 2.5vw, 15px) clamp(15px, 4vw, 25px);
+    }
 }

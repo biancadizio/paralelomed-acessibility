@@ -40,11 +40,11 @@ export default function Header() {
             </div>
 
             <nav className="header-right">
-                <a href="#home" className="active">HOME</a>
-                <a href="#empresa">EMPRESA</a>
-                <a href="#exames">EXAMES</a>
-                <a href="#servicos">SERVIÇOS</a>
-                <a href="#contato">CONTATO</a>
+                <a href="/" className="active">HOME</a>
+                <a href="/empresa">EMPRESA</a>
+                <a href="/exames">EXAMES</a>
+                <a href="/servicos">SERVIÇOS</a>
+                <a href="/contato">CONTATO</a>
             </nav>
         </header>
     );

@@ -1,24 +1,28 @@
 import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/layout/Header'
-import Hero from './components/sections/Hero'
-import About from './components/sections/About'
-import Services from './components/sections/Services'
-import Contact from './components/sections/Contact'
 import Footer from './components/layout/Footer'
+import Home from './pages/Home'
+import Empresa from './pages/Empresa'
+import Exames from './pages/Exames'
+import Servicos from './pages/Servicos'
+import Contato from './pages/Contato'
 
 
 export default function App() {
   return (
-    <div className="app-root">
-      <Header />
-      <Hero />
-      <main className="container">
-
-        <About />
-        <Services />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <div className="app-root">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/empresa" element={<Empresa />} />
+          <Route path="/exames" element={<Exames />} />
+          <Route path="/servicos" element={<Servicos />} />
+          <Route path="/contato" element={<Contato />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   )
 }
