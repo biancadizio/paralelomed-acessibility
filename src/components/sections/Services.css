@@ -1,0 +1,78 @@
+/* Styles for Services section: each service has image left, text right */
+.services {
+  padding: 30px 0 40px;
+}
+
+.services .section-title {
+    background-color: #14594f;
+    /* Mesmo verde do Hero */
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto 2rem;
+    position: relative;
+    /* left: 50%;
+    transform: translateX(-50%); */
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.services .services-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.services .service-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.services .service-img {
+  flex: 0 0 240px;
+  margin: 0;
+  background: #fff;
+  border: 6px solid #efefef;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.services .service-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.services .service-item {
+  flex: 1 1 auto;
+  margin: 0;
+  padding-left: 0;
+  border-left: none;
+}
+
+.services .service-item h3 {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+/*   color: #2b6b61; */
+  font-weight: 600;
+}
+
+.services .service-item p {
+  margin: 0;
+/*   color: #666; */
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 768px) {
+  .services .service-row {
+    flex-direction: column;
+  }
+  .services .service-img {
+    flex: 1 1 auto;
+  }
+}
