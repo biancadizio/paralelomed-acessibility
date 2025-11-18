@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import imagem_exame_ocupacional from '../../assets/img_exame_ocupacional.jpg'
+import imagem_exame_laboratorial from '../../assets/img_exame_laboratorial.gif'
 
 // Styled Components
 const ExamesSection = styled.section`
@@ -47,11 +49,11 @@ const ExameCard = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    background-color: #f5f5f5;
+    background-color: rgba(255, 255, 255, 0);
     padding: 25px;
     border-radius: 12px;
     width: 100%;
-    max-width: 350px;
+    max-width: 500px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 
@@ -62,8 +64,8 @@ const ExameCard = styled.div`
 `
 
 const ExameImage = styled.img`
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 12px;
     background-color: #ddd;
@@ -93,14 +95,14 @@ export default function ExamesComponent() {
     const exames = [
         {
             id: 1,
-            image: "https://via.placeholder.com/100",
+            image: imagem_exame_ocupacional,
             alt: "Exames Ocupacionais",
             title: "Oferecemos ao mercado exames de saúde ocupacional:",
             description: "Admissional, Periódico e Demissional."
         },
         {
             id: 2,
-            image: "https://via.placeholder.com/100",
+            image: imagem_exame_laboratorial,
             alt: "Exames Complementares",
             title: "Exames complementares:",
             description: "ECG, EEG, Espirometria, Audiometria, Exames Laboratoriais, entre outros."
