@@ -76,7 +76,6 @@ const ExameText = styled.div`
 
     h3 {
         margin: 0 0 12px 0;
-        color: #004b3b;
         font-size: 1.1rem;
         font-weight: 600;
         line-height: 1.4;
@@ -84,7 +83,6 @@ const ExameText = styled.div`
 
     p {
         margin: 0;
-        color: #666;
         font-size: 0.95rem;
         line-height: 1.5;
     }
@@ -96,14 +94,14 @@ export default function ExamesComponent() {
         {
             id: 1,
             image: imagem_exame_ocupacional,
-            alt: "Exames Ocupacionais",
+            alt: "Profissional de saúde preenchendo um formulário em uma prancheta enquanto conversa com um paciente sentado à sua frente.",
             title: "Oferecemos ao mercado exames de saúde ocupacional:",
             description: "Admissional, Periódico e Demissional."
         },
         {
             id: 2,
             image: imagem_exame_laboratorial,
-            alt: "Exames Complementares",
+            alt: "Tubos de coleta de sangue e um estetoscópio sobre documentos de exames laboratoriais",
             title: "Exames complementares:",
             description: "ECG, EEG, Espirometria, Audiometria, Exames Laboratoriais, entre outros."
         }
@@ -111,6 +109,7 @@ export default function ExamesComponent() {
 
     return (
         <ExamesSection id="exames" className="container">
+            <div className="section-sentinel" data-section-id="exames" aria-hidden="true"></div>
             <ExamesGrid>
                 <ExamesHeader>
                     <ExamesTitle>EXAMES</ExamesTitle>

@@ -43,6 +43,7 @@ const images = [
 export default function Services() {
   return (
     <section id="servicos" className="services container">
+      <div className="section-sentinel" data-section-id="servicos" aria-hidden="true"></div>
       <SectionTitle>SERVIÇOS</SectionTitle>
       <div className="services-content">
         {servicesData.map((s, i) => (

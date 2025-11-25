@@ -37,6 +37,11 @@ body {
     line-height: 1.6;
 }
 
+/* Smooth scrolling for anchor navigation */
+html {
+    scroll-behavior: smooth;
+}
+
 /* ---------- Container ---------- */
 .container {
     width: 100%;

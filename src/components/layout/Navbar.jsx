@@ -5,11 +5,10 @@ import { Link } from 'react-router-dom'
 export default function NavBar() {
     const links = [
         { href: '/', label: 'INÍCIO', isRoute: true },
-        { href: '#sobre', label: 'SOBRE NÓS', isRoute: false },
-        { href: '#exames', label: 'EXAMES', isRoute: false },
-        { href: '#servicos', label: 'SERVIÇOS', isRoute: false },
-        { href: '/empresa', label: 'EMPRESA', isRoute: true },
-        { href: '#contato', label: 'CONTATO', isRoute: false }
+        { href: '#sobre', label: 'SOBRE NÓS', isRoute: true },
+        { href: '#exames', label: 'EXAMES', isRoute: true },
+        { href: '#servicos', label: 'SERVIÇOS', isRoute: true },
+        { href: '#contato', label: 'CONTATO', isRoute: true }
     ]
 
 

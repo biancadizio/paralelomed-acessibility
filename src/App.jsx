@@ -1,12 +1,8 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
 import Home from './pages/Home'
-import Empresa from './pages/Empresa'
-import Exames from './pages/Exames'
-import Servicos from './pages/Servicos'
-import Contato from './pages/Contato'
 
 
 export default function App() {
@@ -16,10 +12,13 @@ export default function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/empresa" element={<Empresa />} />
-          <Route path="/exames" element={<Exames />} />
-          <Route path="/servicos" element={<Servicos />} />
-          <Route path="/contato" element={<Contato />} />
+          {/* Redirect legacy page routes to home sections */}
+          <Route path="/empresa" element={<Navigate to="/#sobre" replace />} />
+          <Route path="/exames" element={<Navigate to="/#exames" replace />} />
+          <Route path="/servicos" element={<Navigate to="/#servicos" replace />} />
+          <Route path="/contato" element={<Navigate to="/#contato" replace />} />
+          {/* Catch all fallback */}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <Footer />
       </div>
