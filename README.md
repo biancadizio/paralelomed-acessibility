@@ -1,5 +1,12 @@
 ParaleloMed - Medicina e Segurança do Trabalho
 
+Grupo: 
+Bianca Gonçalves Dizio
+Diogo Gianezi de Melo
+Lucas Jacinto Mariano
+Rafael Jun Morita
+Raphael Monteiro Consoni Bonaccorsi
+
 Este projeto é uma aplicação web para a ParaleloMed, uma clínica especializada em Medicina e Segurança do Trabalho, localizada em São Carlos-SP. A aplicação foi desenvolvida em React com Vite e inclui recursos de acessibilidade como alternância de tema, controle de tamanho da fonte e VLibras.
 
 🚀 Tecnologias Utilizadas
