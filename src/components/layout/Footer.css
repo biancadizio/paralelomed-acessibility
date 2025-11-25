@@ -1,0 +1,139 @@
+/* Footer styles */
+.site-footer {
+    background-color: var(--green-main);
+    color: #fff;
+    padding: 2.5rem 0 1rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.footer-column h4 {
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+.footer-column address,
+.footer-column p,
+.footer-column ul {
+    color: #fff;
+}
+
+.footer-column address p {
+    margin-bottom: 0.25rem;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    transition: background 0.2s, color 0.2s;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+.footer-contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 0.6rem;
+    flex-direction: column;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-contact a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.icon {
+    color: #fff;
+    font-size: 0.95rem;
+}
+.social-link svg, .footer-contact svg { font-size: 1rem; }
+
+.footer-bottom {
+    margin-top: 1.5rem;
+    text-align: center;
+    padding: 1rem 0;
+    font-weight: 600;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-contact ul {
+        align-items: center;
+    }
+}
+
+.footer-textareas {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+}
+
+.footer-textarea-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 300px;
+    max-width: 400px;
+}
+
+.footer-textarea-label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.footer-textarea-group textarea {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    border-radius: 5px;
+    padding: 0.5rem;
+    resize: vertical;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.footer-textarea-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}

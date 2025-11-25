@@ -1,0 +1,135 @@
+import React from 'react'
+import styled from 'styled-components'
+import imagem_exame_ocupacional from '../../assets/img_exame_ocupacional.jpg'
+import imagem_exame_laboratorial from '../../assets/img_exame_laboratorial.gif'
+
+// Styled Components
+const ExamesSection = styled.section`
+    width: 100%;
+`
+
+const ExamesGrid = styled.div`
+    display: flex;
+    flex-direction: column;
+`
+
+const ExamesHeader = styled.div`
+    background-color: #004b3b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    min-height: 80px;
+    border-radius: 10px 10px 0 0;
+`
+
+const ExamesTitle = styled.h2`
+    color: white;
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+`
+
+const ExamesList = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 20px;
+    }
+`
+
+const ExameCard = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 25px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 16px rgba(0, 75, 59, 0.2);
+    }
+`
+
+const ExameImage = styled.img`
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    background-color: #ddd;
+`
+
+const ExameText = styled.div`
+    width: 100%;
+
+    h3 {
+        margin: 0 0 12px 0;
+        font-size: 1.1rem;
+        font-weight: 600;
+        line-height: 1.4;
+    }
+
+    p {
+        margin: 0;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+`
+
+// Component
+export default function ExamesComponent() {
+    const exames = [
+        {
+            id: 1,
+            image: imagem_exame_ocupacional,
+            alt: "Profissional de saúde preenchendo um formulário em uma prancheta enquanto conversa com um paciente sentado à sua frente.",
+            title: "Oferecemos ao mercado exames de saúde ocupacional:",
+            description: "Admissional, Periódico e Demissional."
+        },
+        {
+            id: 2,
+            image: imagem_exame_laboratorial,
+            alt: "Tubos de coleta de sangue e um estetoscópio sobre documentos de exames laboratoriais",
+            title: "Exames complementares:",
+            description: "ECG, EEG, Espirometria, Audiometria, Exames Laboratoriais, entre outros."
+        }
+    ]
+
+    return (
+        <ExamesSection id="exames" className="container">
+            <div className="section-sentinel" data-section-id="exames" aria-hidden="true"></div>
+            <ExamesGrid>
+                <ExamesHeader>
+                    <ExamesTitle>EXAMES</ExamesTitle>
+                </ExamesHeader>
+                
+                <ExamesList>
+                    {exames.map((exame) => (
+                        <ExameCard key={exame.id}>
+                            <ExameImage 
+                                src={exame.image} 
+                                alt={exame.alt} 
+                            />
+                            <ExameText>
+                                <h3>{exame.title}</h3>
+                                <p>{exame.description}</p>
+                            </ExameText>
+                        </ExameCard>
+                    ))}
+                </ExamesList>
+            </ExamesGrid>
+        </ExamesSection>
+    )
+}

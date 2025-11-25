@@ -14,11 +14,13 @@
 [data-theme='dark'] {
     --bg-color: var(--dark-bg);
     --text-color: var(--text-light);
+    --title-color: var(--text-light);
 }
 
 [data-theme='light'] {
     --bg-color: #fff;
     --text-color: var(--text-dark);
+    --title-color: var(--green-main);
 }
 
 /* ---------- Reset básico ---------- */
@@ -37,6 +39,11 @@ body {
     line-height: 1.6;
 }
 
+/* Smooth scrolling for anchor navigation */
+html {
+    scroll-behavior: smooth;
+}
+
 /* ---------- Container ---------- */
 .container {
     width: 100%;
@@ -50,7 +57,7 @@ h1,
 h2,
 h3 {
     font-weight: 600;
-    color: var(--green-main);
+    color: var(--title-color);
 }
 
 p {
